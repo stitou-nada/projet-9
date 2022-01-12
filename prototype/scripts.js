@@ -26,8 +26,7 @@ fetch(url)
     var sky = data.weather[0].description
 
 
-    // document.write(city + "<br>"+ sky+"<br>"+ temprture)
+     document.write(city + "<br>"+ sky+"<br>"+ temprture)
 
-console.log(data)
 
 })

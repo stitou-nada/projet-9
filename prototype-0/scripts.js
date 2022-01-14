@@ -6,19 +6,12 @@ var ouvrageId = null;
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
     var ouvrage = readOuvrage();
-    if (selectRow == null) {
-
-        gestionOuvrage.addOuvrage(ouvrage);
-    } else
-    if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
-        ouvrage.id = rowId;
-        gestionOuvrage.editOuvrage(ouvrage)
-    }
+    gestionOuvrage.addOuvrage(ouvrage);
 
     insertNewRow();
 
     resetForm();
-     
+
 })
 
 function resetForm() {
@@ -29,7 +22,7 @@ function resetForm() {
 
 function readOuvrage() {
     var ouvrage = new Ouvrage();
-    
+
     ouvrage.titre = document.getElementById("inputTitle").value;
     return ouvrage;
 }
@@ -37,18 +30,18 @@ function readOuvrage() {
 
 
 function insertNewRow() {
-    var ouvrageList = gestionOuvrage.getAllItem()
-    console.log(gestionOuvrage.getAllItem())
+    var List = gestionOuvrage.ouvrageList
     var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
-   while(tableBody.rows.length > 0){
-       tableBody.deleteRow(0);
-   }
-   for(var i = 0; i < ouvrageList.length; i++){
-    var newRow = tableBody.insertRow(tableBody.length);
-    newRow.insertCell(0).innerHTML = ouvrageList[i].id;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = ouvrageList[i].titre;
-    cell3 = newRow.insertCell(2);
-   }
-  
+    while (tableBody.rows.length > 0) {
+        tableBody.deleteRow(0);
+    } 
+
+    for (var i = 0; i < List.length; i++) {
+        var newRow = tableBody.insertRow(tableBody.length);
+        cell1 = newRow.insertCell(0)
+        cell1.innerHTML = List[i].id;
+        cell2 = newRow.insertCell(1);
+        cell2.innerHTML = List[i].titre;
+    }
+
 }

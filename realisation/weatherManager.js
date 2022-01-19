@@ -2,14 +2,15 @@ class WeatherManager {
     #_currentForecast;
     #_weekForecast;
 
-    set currentForecast(value) {
-        this.#_currentForecast = value
-    }
-
     get currentForecast() {
         return this.#_currentForecast
     }
 
+    set currentForecast(value) {
+        this.#_currentForecast = value
+    }
+
+   
     // async fetchForecast(url) {
     //     var weather = new Weather()
 

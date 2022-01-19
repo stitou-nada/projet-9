@@ -6,7 +6,7 @@ async function onSearch() {
     var weatherManager = new WeatherManager()
 
     city = document.getElementById("cityInput").value
-    var url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
 
     if (city) {
         weatherManager.fetchForecast(url).then(() => {
@@ -17,28 +17,18 @@ async function onSearch() {
     document.getElementById("cityInput").value = ""
     city = undefined
 
-  
+
 
 
 }
 
 
 function display(currentForecast) {
-    document.getElementById('city').textContent= currentForecast.city
-    document.getElementById('temp').textContent= currentForecast.temp+ ""+ "°C"
+    document.getElementById('city').textContent = currentForecast.city
+    document.getElementById('temp').textContent = currentForecast.temp + "" + "°C"
 
 
-    document.getElementById('desc').textContent= currentForecast.description
-    document.getElementById('country').textContent= currentForecast.humidity
+    document.getElementById('desc').textContent = currentForecast.description
+    document.getElementById('country').textContent = currentForecast.humidity
 
 }
-
-    let dateToday =document.getElementById("date");
-  let today = new Date();
-  let day =`${today.getDate() < 10?"0" :""}${today.getDate()}`
-    let month =`${(today.getMonth()+1) < 10?"0" :""}${today.getMonth()+1}`
-
-    let year =today.getFullYear();
-
-    dateToday.textContent =`${day}/${month}/${year}`
-    

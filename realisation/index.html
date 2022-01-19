@@ -16,7 +16,9 @@
 
     <div class="container ">
         <div class="d-flex justify-content-center ">
-            <div class="search"> <input id="cityInput" class="search_input" type="text" name="" placeholder="Search here..."> <a href="#"   class="search_icon"><i onclick="onSearch()" class="fa fa-search"></i></a> </div>
+            <div class="search"> <input id="cityInput" class="search_input" type="text" name="" placeholder="Search here...">
+                <a href="#" class="search_icon">
+                <i onclick="onSearch()" class="fa fa-search"></i></a> </div>
         </div>
     </div>
     <!-- <div>
@@ -25,27 +27,28 @@
     </div> -->
     <div class="current_weather">
         <div>
-            
+
             <p id="descri"></p>
         </div>
-        
-           
-            <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
-                <div class="row   justify-content-center px-3">
-                    <div class="  card">
-                        <h2  id="city" class="ml-auto mr-4 mt-3 mb-0"></h2>
-                        <p id="icon"></p>
-                        <p id="desc" class="ml-auto mr-4 mb-0 med-font"></p>
-                        <h1 id="temp" class="ml-auto mr-4 large-font">&#176;</h1>
-                        <div class="humidity">
-                            <!-- <img src="/realisation/humidity.png" alt="">  -->
-                            <p id="country" class="time-font  mb-0 ml-4 mt-auto"><span class="sm-font"></span></p>
-                        </div>
-                        <p id="date" class="ml-4 mb-4"></p>
+
+
+        <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+            <div class="row   justify-content-center px-3">
+                <div class="  card">
+                    <h2 id="city" class="ml-auto mr-4 mt-3 mb-0"></h2>
+                    <!-- <p id="icon"></p> -->
+                    <p id="desc" class="ml-auto mr-4 mb-0 med-font"></p>
+                    <h1 id="temp" class="ml-auto mr-4 large-font">&#176;</h1>
+                    <div class="humidity">
+                        <!-- <img src="/realisation/humidity.png" alt=""> -->
+                        <img src="http://openweathermap.org/img/w/" id="icon">
+                        <p id="country" class="time-font  mb-0 ml-4 mt-auto"><span class="sm-font"></span></p>
                     </div>
+                   
                 </div>
             </div>
-        
+        </div>
+
     </div>
 </body>
 <script src="weather.js"></script>

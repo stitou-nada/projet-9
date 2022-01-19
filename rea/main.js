@@ -8,7 +8,16 @@ button.addEventListener('click', function(){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=50a7aa80fa492fa92e874d23ad061374')
 
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(function(data) {
+            console.log(data),
+                document.getElementById("name").innerHTML = data.name,
+                document.getElementById("desc").innerHTML = data.weather[0].description,       
+                document.getElementById("temp").innerHTML = data.main.temp            
+            
+            
+            })
+
+
         //    {var nameValue = data['name'];
         //     var tempValue = data['main']['temps'];
         //     var descValue = data['weather'][0]['description'];

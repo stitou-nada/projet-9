@@ -1,11 +1,24 @@
-var city;
+var city = prompt()
 
-var key='1253309e30b4fb953c136c1426565be0&units=metric'
-var weatherManager = new weatherManager()
+var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b`
 
-function onSearch(){
-    city = document.getElementById("cityInput").value
-    var url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
-    weatherManager.fetchForecast(url)
-    document.getElementById("cityInpu").value=""
-}
+
+
+fetch(url)
+    .then(function (reponse) {
+        return reponse.json()
+
+    })
+    .then(function (data) {
+
+        var city = ("City :   " + data.name)
+
+        var wind = ("Wind speed:  " + data.wind.speed)
+        var sky = ('Weather:   ' + data.weather[0].description)
+
+
+        document.write(city + "<br>" + sky + "<br>" + wind)
+
+    console.log(data)
+
+    })

@@ -7,3 +7,13 @@ display: flex;
 justify-content: flex-start;
 
 }
+.icon{
+    width: 100px;
+    height:100px;
+}
+.humidity ,#iconHumidity,.country{
+    
+    width: 40PX;
+    height: 40px;
+    
+}

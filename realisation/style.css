@@ -4,7 +4,7 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("natur.jpg");
+    background-image: url("sunset.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -59,7 +59,7 @@ a:link {
 }
 
 body {
-    color: #fff;
+    color: rgb(255, 255, 255);
     overflow-x: hidden;
     height: 100%;
     background-color: #CFD8DC;
@@ -67,7 +67,7 @@ body {
 }
 
 .card {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     width: 600px;
     height: 350px;

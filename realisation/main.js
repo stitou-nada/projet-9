@@ -7,14 +7,15 @@
         var weatherManager = new WeatherManager()
 
         city = document.getElementById("cityInput").value
-        var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b&units=metric`;
+        var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0bd0cd1e7d8ab7a578a5a4d28a57d45b&units=metric&lang=fr`;
 
         if (city) {
             weatherManager.fetchForecast(url).then(() => {
+                
                 display(weatherManager.currentForecast)
             })
         }
-
+        
         document.getElementById("cityInput").value = ""
         city = undefined
 
@@ -28,7 +29,7 @@
         document.getElementById('city').textContent = currentForecast.city
         document.getElementById('temp').textContent = currentForecast.temp + "" + "°C"
 
-        document.getElementById('icon').src = "http://openweathermap.org/img/w/" + currentForecast.iconCode + ".png";
+        document.getElementById('icon').src = "http://openweathermap.org/img/w/" +currentForecast.iconCode + ".png";
         document.getElementById('desc').textContent = currentForecast.description
         document.getElementById('country').textContent = currentForecast.humidity
     

@@ -17,7 +17,7 @@ class WeatherManager {
 
         var weather = new Weather()
         weather.city = data.name
-        weather.description = data.weather[0].main
+        weather.description = data.weather[0].description
         weather.iconCode = data.weather[0].icon
         weather.temp = data.main.temp
         weather.country = data.main.country
